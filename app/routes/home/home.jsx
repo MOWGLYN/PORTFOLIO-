@@ -103,8 +103,8 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Designing Thumbnails That Drive Clicks"
+        description="Eye-catching visuals crafted to boost engagement and maximize views."
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
@@ -124,10 +124,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title="Clients statistics"
+        description="the development of a client statistics after working with me"
+        buttonText="View statistics"
+        buttonLink=""
         model={{
           type: 'phone',
           alt: 'App login screen',

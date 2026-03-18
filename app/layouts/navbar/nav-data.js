@@ -21,18 +21,18 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    label: 'Bluesky',
-    url: `https://bsky.app/profile/${config.bluesky}`,
-    icon: 'bluesky',
+    label: 'Whatsapp',
+    url: `https://wa.me/+212639152998?text=hello%20Zakaria%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20work%20with%20you`,
+    icon: 'whatsapp',
   },
   {
-    label: 'Figma',
-    url: `https://www.figma.com/${config.figma}`,
-    icon: 'figma',
+    label: 'Gmail',
+    url: `mailto:Fatihzakaria.me@gmail.com?subject=Work%20Inquiry&body=hello%20Zakaria%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20work%20with%20you`,
+    icon: 'gmail',
   },
   {
     label: 'Github',
-    url: `https://github.com/${config.github}`,
+    url: `https://github.com/zakariafatih`,
     icon: 'github',
   },
 ];

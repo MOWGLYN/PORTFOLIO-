@@ -21,15 +21,11 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
+      I’m Zakaria, currently I live in Beni Mellal working as a senior thumbnails designer. with more than 10K sells, I design a stunning and eye catching thumbnails  If you’re interested in the business with me, don't hesitate to contact me .
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
+      In my spare time I like to play video games. I’m always down for hearing
       about new projects, so feel free to drop me a line.
     </Text>
   </Fragment>

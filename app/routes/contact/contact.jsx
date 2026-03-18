@@ -10,13 +10,14 @@ import { Text } from '~/components/text';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
 import { useFormInput } from '~/hooks';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
-import { Form, useActionData, useNavigation } from '@remix-run/react';
-import { json } from '@remix-run/cloudflare';
-import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import emailjs from '@emailjs/browser';
 import styles from './contact.module.css';
+
+// Initialize EmailJS with public key
+emailjs.init('YH--x4cjGmyv69C9Z');
 
 export const meta = () => {
   return baseMeta({
@@ -30,87 +31,88 @@ const MAX_EMAIL_LENGTH = 512;
 const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
 
-export async function action({ context, request }) {
-  const ses = new SESClient({
-    region: 'us-east-1',
-    credentials: {
-      accessKeyId: context.cloudflare.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: context.cloudflare.env.AWS_SECRET_ACCESS_KEY,
-    },
-  });
-
-  const formData = await request.formData();
-  const isBot = String(formData.get('name'));
-  const email = String(formData.get('email'));
-  const message = String(formData.get('message'));
-  const errors = {};
-
-  // Return without sending if a bot trips the honeypot
-  if (isBot) return json({ success: true });
-
-  // Handle input validation on the server
-  if (!email || !EMAIL_PATTERN.test(email)) {
-    errors.email = 'Please enter a valid email address.';
-  }
-
-  if (!message) {
-    errors.message = 'Please enter a message.';
-  }
-
-  if (email.length > MAX_EMAIL_LENGTH) {
-    errors.email = `Email address must be shorter than ${MAX_EMAIL_LENGTH} characters.`;
-  }
-
-  if (message.length > MAX_MESSAGE_LENGTH) {
-    errors.message = `Message must be shorter than ${MAX_MESSAGE_LENGTH} characters.`;
-  }
-
-  if (Object.keys(errors).length > 0) {
-    return json({ errors });
-  }
-
-  // Send email via Amazon SES
-  await ses.send(
-    new SendEmailCommand({
-      Destination: {
-        ToAddresses: [context.cloudflare.env.EMAIL],
-      },
-      Message: {
-        Body: {
-          Text: {
-            Data: `From: ${email}\n\n${message}`,
-          },
-        },
-        Subject: {
-          Data: `Portfolio message from ${email}`,
-        },
-      },
-      Source: `Portfolio <${context.cloudflare.env.FROM_EMAIL}>`,
-      ReplyToAddresses: [email],
-    })
-  );
-
-  return json({ success: true });
-}
-
 export const Contact = () => {
   const errorRef = useRef();
-  const email = useFormInput('');
-  const message = useFormInput('');
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [errors, setErrors] = useState({});
   const initDelay = tokens.base.durationS;
-  const actionData = useActionData();
-  const { state } = useNavigation();
-  const sending = state === 'submitting';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setErrors({});
+
+    const formData = new FormData(e.target);
+    const isBot = String(formData.get('name'));
+    const email = String(formData.get('email'));
+    const message = String(formData.get('message'));
+    const newErrors = {};
+
+    // Return without sending if a bot trips the honeypot
+    if (isBot) {
+      setSuccess(true);
+      setSending(false);
+      return;
+    }
+
+    // Handle input validation
+    if (!email || !EMAIL_PATTERN.test(email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+
+    if (!message) {
+      newErrors.message = 'Please enter a message.';
+    }
+
+    if (email.length > MAX_EMAIL_LENGTH) {
+      newErrors.email = `Email address must be shorter than ${MAX_EMAIL_LENGTH} characters.`;
+    }
+
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      newErrors.message = `Message must be shorter than ${MAX_MESSAGE_LENGTH} characters.`;
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setSending(false);
+      return;
+    }
+
+    try {
+      console.log('Sending email via EmailJS...');
+      
+      // Send email via EmailJS
+      const result = await emailjs.send(
+        'service_36061wz',
+        'template_hwr500b',
+        {
+          from_email: email,
+          message: message,
+         reply_to: email,
+        }
+      );
+      
+      console.log('Email sent successfully:', result);
+      setSuccess(true);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setErrors({ 
+        general: `Failed to send: ${error.text || error.message || 'Unknown error'}` 
+      });
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <Section className={styles.contact}>
-      <Transition unmount in={!actionData?.success} timeout={1600}>
+      <Transition unmount in={!success} timeout={1600}>
         {({ status, nodeRef }) => (
-          <Form
-            unstable_viewTransition
+          <form
             className={styles.form}
-            method="post"
             ref={nodeRef}
+            onSubmit={handleSubmit}
           >
             <Heading
               className={styles.title}
@@ -143,7 +145,6 @@ export const Contact = () => {
               type="email"
               name="email"
               maxLength={MAX_EMAIL_LENGTH}
-              {...email}
             />
             <Input
               required
@@ -155,11 +156,10 @@ export const Contact = () => {
               label="Message"
               name="message"
               maxLength={MAX_MESSAGE_LENGTH}
-              {...message}
             />
             <Transition
               unmount
-              in={!sending && actionData?.errors}
+              in={!sending && Object.keys(errors).length > 0}
               timeout={msToNum(tokens.base.durationM)}
             >
               {({ status: errorStatus, nodeRef }) => (
@@ -174,8 +174,9 @@ export const Contact = () => {
                   <div className={styles.formErrorContent} ref={errorRef}>
                     <div className={styles.formErrorMessage}>
                       <Icon className={styles.formErrorIcon} icon="error" />
-                      {actionData?.errors?.email}
-                      {actionData?.errors?.message}
+                      {errors.email}
+                      {errors.message}
+                      {errors.general}
                     </div>
                   </div>
                 </div>
@@ -194,10 +195,10 @@ export const Contact = () => {
             >
               Send message
             </Button>
-          </Form>
+          </form>
         )}
       </Transition>
-      <Transition unmount in={actionData?.success}>
+      <Transition unmount in={success}>
         {({ status, nodeRef }) => (
           <div className={styles.complete} aria-live="polite" ref={nodeRef}>
             <Heading
