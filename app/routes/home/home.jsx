@@ -127,7 +127,7 @@ export const Home = () => {
         title="Clients statistics"
         description="the development of a client statistics after working with me"
         buttonText="View statistics"
-        buttonLink=""
+        buttonLink="/projects/thumbnails"
         model={{
           type: 'phone',
           alt: 'App login screen',

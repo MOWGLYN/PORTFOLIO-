@@ -1,6 +1,4 @@
-import sliceAnnotationLarge from '~/assets/slice-annotation-large.png';
-import sliceAnnotationPlaceholder from '~/assets/slice-annotation-placeholder.png';
-import sliceAnnotation from '~/assets/slice-annotation.png';
+
 import sliceAppLarge from '~/assets/slice-app-large.jpg';
 import sliceAppPlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceApp from '~/assets/slice-app.jpg';
@@ -19,8 +17,8 @@ import sliceSidebarLayersLarge from '~/assets/slice-sidebar-layers-large.png';
 import sliceSidebarLayersPlaceholder from '~/assets/slice-sidebar-layers-placeholder.png';
 import sliceSidebarLayers from '~/assets/slice-sidebar-layers.png';
 import sliceSlidesLarge from '~/assets/slice-slides-large.jpg';
-import sliceSlidesPlaceholder from '~/assets/slice-slides-placeholder.jpg';
-import sliceSlides from '~/assets/slice-slides.jpg';
+import sliceSlidesPlaceholder from '~/assets/slice-slides-large.jpg';
+import sliceSlides from '~/assets/slice-slides-large.jpg';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import {
@@ -164,16 +162,7 @@ export const Slice = () => {
                 />
               </div>
 
-              <div className={styles.gridForeground}>
-                <Image
-                  srcSet={`${sliceAnnotation} 440w, ${sliceAnnotationLarge} 880w`}
-                  width={440}
-                  height={340}
-                  placeholder={sliceAnnotationPlaceholder}
-                  alt="Editing details of a YouTube thumbnail design."
-                  sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                />
-              </div>
+
             </div>
 
             <div className={styles.gridText}>
