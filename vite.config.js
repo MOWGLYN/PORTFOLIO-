@@ -11,8 +11,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
 
 export default defineConfig({
-  // Crucial for GitHub Pages subfolders
-  base: '/zakariafatih/',
+  // 1. Sets the public path for assets (CSS, JS, .glb files)
+  base: '/PORTFOLIO-/',
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
   build: {
     assetsInlineLimit: 1024,
@@ -27,10 +27,10 @@ export default defineConfig({
       providerImportSource: '@mdx-js/react',
     }),
     remix({
-      // 1. Disable SSR to fix Theme and 3D issues
+      // 2. Fixes Dark/Light mode hydration errors by making it a static SPA
       ssr: false,
-      // 2. Set the subfolder path
-      basename: '/zakariafatih/',
+      // 3. Tells Remix routing to start after the subfolder name
+      basename: '/PORTFOLIO-/',
       routes(defineRoutes) {
         return defineRoutes(route => {
           route('/', 'routes/home/route.js', { index: true });
