@@ -7,7 +7,10 @@ import {
   useLoaderData,
   useNavigation,
   useRouteError,
+  useFetcher,
 } from '@remix-run/react';
+import { json } from '@remix-run/node';
+import { themeStorage } from '~/utils/theme.server';
 import { ThemeProvider, themeStyles } from '~/components/theme-provider';
 import GothamBook from '~/assets/fonts/gotham-book.woff2';
 import GothamMedium from '~/assets/fonts/gotham-medium.woff2';
@@ -44,28 +47,28 @@ export const links = () => [
   { rel: 'author', href: `${import.meta.env.BASE_URL}humans.txt`, type: 'text/plain' },
 ];
 
-export const clientLoader = async ({ request }) => {
+export const loader = async ({ request }) => {
   const { url } = request;
   const { pathname } = new URL(url);
   const pathnameSliced = pathname.endsWith('/') ? pathname.slice(0, -1) : url;
   const canonicalUrl = `${config.url}${pathnameSliced}`;
 
-  const theme = window.localStorage.getItem('theme') || 'dark';
+  const session = await themeStorage.getSession(request.headers.get('Cookie'));
+  const theme = session.get('theme') || 'dark';
 
-  return { canonicalUrl, theme };
+  return json({ canonicalUrl, theme });
 };
-
-clientLoader.hydrate = true;
 
 export default function App() {
   const { canonicalUrl, theme: defaultTheme } = useLoaderData();
   const [theme, setTheme] = useState(defaultTheme);
   const { state } = useNavigation();
+  const fetcher = useFetcher();
 
   function toggleTheme(newTheme) {
     const nextTheme = newTheme ? newTheme : theme === 'dark' ? 'light' : 'dark';
-    window.localStorage.setItem('theme', nextTheme);
     setTheme(nextTheme);
+    fetcher.submit({ theme: nextTheme }, { action: '/api/set-theme', method: 'post' });
   }
 
   useEffect(() => {
@@ -137,20 +140,3 @@ export function ErrorBoundary() {
   );
 }
 
-export function HydrateFallback() {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#111" />
-        <meta name="color-scheme" content="dark light" />
-        <Meta />
-        <Links />
-      </head>
-      <body data-theme="dark">
-        <Scripts />
-      </body>
-    </html>
-  );
-}

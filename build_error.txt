@@ -25,139 +25,224 @@
 ┗
 vite v5.4.21 building for production...
 transforming...
-✓ 872 modules transformed.
-x Build failed in 3.74s
-app/routes/home/route.js (1:32): "links" is not exported by "app/routes/home/home.jsx", imported by "app/routes/home/route.js".
-file: /Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js:1:32
+✓ 874 modules transformed.
+Generated an empty chunk: "api.set-theme".
+rendering chunks...
+computing gzip size...
+build/client/assets/slice-sidebar-annotations-placeholder-Bewc5d-7.png                                                             1.05 kB
+build/client/assets/spr-lesson-builder-dark-placeholder-BYjrS8rr.jpg                                                               1.87 kB
+build/client/assets/error-flatline-eK98OAAk.svg                                                                                    3.08 kB │ gzip:   1.40 kB
+build/client/assets/katakana-DR-bVyLd.svg                                                                                          3.55 kB │ gzip:   1.75 kB
+build/client/assets/icons-DoN_9thQ.svg                                                                                             4.56 kB │ gzip:   1.63 kB
+build/client/assets/ipa-gothic-DimHCOud.woff2                                                                                      7.21 kB
+build/client/assets/gotham-bold-D1kvQ7KV.woff2                                                                                    11.40 kB
+build/client/assets/gotham-bold-italic-C_msAlmW.woff2                                                                             11.92 kB
+build/client/assets/gotham-book-Bnaws0Ef.woff2                                                                                    12.02 kB
+build/client/assets/gotham-medium-0VT3RO8I.woff2                                                                                  12.05 kB
+build/client/assets/gotham-medium-italic-Dok430ou.woff2                                                                           12.81 kB
+build/client/assets/gotham-book-italic-Bm2IEtSK.woff2                                                                             12.87 kB
+build/client/.vite/manifest.json                                                                                                  22.88 kB │ gzip:   3.14 kB
+build/client/assets/iphone-11-DGIHa_Ph.glb                                                                                        27.52 kB
+build/client/assets/macbook-pro-DZn-FKKF.glb                                                                                      57.03 kB
+build/client/assets/IMG-20250130-WA0007-RTxkFzoB.jpg                                                                              88.71 kB
+build/client/assets/slice-background-5195om16.jpg                                                                                242.34 kB
+build/client/assets/slice-slides-large-hvu9NRw8.jpg                                                                              256.18 kB
+build/client/assets/_f8eSwcaT9U-HD-CX6XDlJl.jpg                                                                                  282.84 kB
+build/client/assets/gamestack-list-CtMAddSG.jpg                                                                                  289.50 kB
+build/client/assets/gamestack-login-CqrhVxyM.jpg                                                                                 293.26 kB
+build/client/assets/slice-app-Sli82nIu.jpg                                                                                       348.09 kB
+build/client/assets/slice-irl-mlG3MKW-.jpg                                                                                       414.01 kB
+build/client/assets/15_Most_Luxurious_Cars_In_The_WorldONE-B7fe_BJf.png                                                          557.00 kB
+build/client/assets/slice-sidebar-layers-_wR7fvS_.png                                                                            719.74 kB
+build/client/assets/Elon_Musk_SHOCKED_as_U.K._Bans_Cybertruck_on_Roads_TWO-Cl7Dx-WV.png                                          884.97 kB
+build/client/assets/Canada_s_Shocking_Move_Could_Cripple__THREE-DFAv5xIh.png                                                     993.37 kB
+build/client/assets/Canada_s_Shocking_Move_Could_Cripple_TWO-Denatgdv.png                                                      1,041.88 kB
+build/client/assets/John_Deere_Just_THREATENED_Donald_Trump_TWO-5WJ6G89G.png                                                   1,058.62 kB
+build/client/assets/John_Deere_SHUTS_DOWN__174_Billion__TWO-_QV_YlUy.png                                                       1,104.44 kB
+build/client/assets/Blake_Lively_TWO-B96p7LhA.png                                                                              1,179.59 kB
+build/client/assets/Canada_s_Shocking_Move_Could_Cripple__ONE-BzFeDGoU.png                                                     1,199.42 kB
+build/client/assets/John_Deere_SHUTS_DOWN__174_Billion_ONE-C_r4eyjy.png                                                        1,204.62 kB
+build/client/assets/Trump_in_PANIC_as_protests_ERUPT_across_America_2__1_-AemEmIwq.png                                         1,270.86 kB
+build/client/assets/MISTRAL_DESIGN__-_2024-04-24T191647.006-69xDj1Sr.png                                                       1,270.87 kB
+build/client/assets/Trump_in_PANIC_as_protests_ERUPT_across_America_2__2_-fypR-81u.png                                         1,384.39 kB
+build/client/assets/Trump_in_PANIC_as_protests_ERUPT_across_America_1-mXjHEPFK.png                                             1,445.67 kB
+build/client/assets/MISTRAL_DESIGN__21_-D69DrXwJ.png                                                                           1,497.08 kB
+build/client/assets/MISTRAL_DESIGN__22_-BHuc3Vgv.png                                                                           1,503.32 kB
+build/client/assets/profile-D-eTbxH2.jpg                                                                                       1,524.65 kB
+build/client/assets/Farmers_Are_Fed_Up_With_John_ONE-E0bLIVlT.png                                                              1,620.36 kB
+build/client/assets/MISTRAL_DESIGN__29_-CRi1mAws.png                                                                           1,680.99 kB
+build/client/assets/slice-background-bar-CAd2Z59c.jpg                                                                          2,700.11 kB
+build/client/assets/Airbus_Drops_A_BOMBSHELL_And_This_Could_Be_The_END_Of_Boeing__ONE-DecBt_Aw.png                             3,597.90 kB
+build/client/assets/HAPPENING_NOW__Canada_Shuts_Down__103.3_Billion_Oil_Export_to_U.S._Industry_With_Bold_Move_3-LQqmvmIF.png  3,737.12 kB
+build/client/assets/spr-lesson-builder-dark-8ehY8f04.jpg                                                                       5,387.91 kB
+build/client/assets/spr-lesson-builder-dark-large-Bz0mR2Qn.jpg                                                                 5,722.33 kB
+build/client/assets/index-Ben_IK3z.css                                                                                             0.21 kB │ gzip:   0.17 kB
+build/client/assets/displacement-sphere-p-Z9Zs2R.css                                                                               0.24 kB │ gzip:   0.18 kB
+build/client/assets/decoder-text-DEyQaJJ0.css                                                                                      0.50 kB │ gzip:   0.32 kB
+build/client/assets/meta-CsIKEH-0.css                                                                                              1.02 kB │ gzip:   0.41 kB
+build/client/assets/divider-RCNywGVV.css                                                                                           1.14 kB │ gzip:   0.43 kB
+build/client/assets/route-DBxCm94u.css                                                                                             1.62 kB │ gzip:   0.52 kB
+build/client/assets/route-CX4FM3ZF.css                                                                                             2.09 kB │ gzip:   0.77 kB
+build/client/assets/image-Db9mAJ2F.css                                                                                             2.22 kB │ gzip:   0.77 kB
+build/client/assets/route-qxOOjbBO.css                                                                                             2.98 kB │ gzip:   1.10 kB
+build/client/assets/route-J2LfAs6e.css                                                                                             3.21 kB │ gzip:   1.12 kB
+build/client/assets/error-BT7XG2_u.css                                                                                             4.17 kB │ gzip:   1.09 kB
+build/client/assets/heading-UwcgqAqE.css                                                                                           6.21 kB │ gzip:   1.53 kB
+build/client/assets/project-C8oXv4p4.css                                                                                           8.02 kB │ gzip:   1.76 kB
+build/client/assets/route-DUdvKm6g.css                                                                                             9.45 kB │ gzip:   1.81 kB
+build/client/assets/root-AirrcxGX.css                                                                                             10.20 kB │ gzip:   2.22 kB
+build/client/assets/route-B21ryf_9.css                                                                                            13.11 kB │ gzip:   2.64 kB
+build/client/assets/api.set-theme-l0sNRNKZ.js                                                                                      0.00 kB │ gzip:   0.02 kB
+build/client/assets/slice-background-large-pXIRmIuu.js                                                                             0.05 kB │ gzip:   0.07 kB
+build/client/assets/_-DuygyV90.js                                                                                                  0.29 kB │ gzip:   0.24 kB
+build/client/assets/route-DeE-7m2b.js                                                                                              0.40 kB │ gzip:   0.26 kB
+build/client/assets/slice-background-D6bm6AsI.js                                                                                   0.71 kB │ gzip:   0.49 kB
+build/client/assets/divider-BI18aMCb.js                                                                                            0.72 kB │ gzip:   0.37 kB
+build/client/assets/slice-app-Bjp7dGgn.js                                                                                          1.01 kB │ gzip:   0.71 kB
+build/client/assets/useWindowSize-jQ0f1kHa.js                                                                                      1.34 kB │ gzip:   0.67 kB
+build/client/assets/meta-BsD0vbHW.js                                                                                               1.42 kB │ gzip:   0.66 kB
+build/client/assets/error-C8Ad9gbU.js                                                                                              2.34 kB │ gzip:   1.08 kB
+build/client/assets/theme-provider-BLBvwqq4.js                                                                                     2.43 kB │ gzip:   0.84 kB
+build/client/assets/route-DvNjHVtB.js                                                                                              2.77 kB │ gzip:   1.41 kB
+build/client/assets/config-BLQ10mH-.js                                                                                             2.88 kB │ gzip:   1.22 kB
+build/client/assets/entry.client-Br6nDkrn.js                                                                                       3.73 kB │ gzip:   1.40 kB
+build/client/assets/route-CRvdHDVf.js                                                                                              3.77 kB │ gzip:   1.68 kB
+build/client/assets/image-rjN4sxsU.js                                                                                              3.78 kB │ gzip:   1.80 kB
+build/client/assets/project-BsvC_XsT.js                                                                                            4.01 kB │ gzip:   1.69 kB
+build/client/assets/route-DhE2A9HY.js                                                                                              5.77 kB │ gzip:   2.33 kB
+build/client/assets/route-CCkpvcT5.js                                                                                              8.33 kB │ gzip:   4.35 kB
+build/client/assets/heading-CZO_DXzI.js                                                                                            9.57 kB │ gzip:   4.07 kB
+build/client/assets/root-vZNpgclT.js                                                                                               9.80 kB │ gzip:   4.13 kB
+build/client/assets/route-CF-Eql0K.js                                                                                              9.87 kB │ gzip:   4.04 kB
+build/client/assets/displacement-sphere-CNxf2mmp.js                                                                               12.43 kB │ gzip:   3.55 kB
+build/client/assets/route-Dm3BNZvI.js                                                                                             14.77 kB │ gzip:   6.14 kB
+build/client/assets/decoder-text-CNGEFREB.js                                                                                      17.93 kB │ gzip:   7.73 kB
+build/client/assets/index-Chx_5wO8.js                                                                                             38.80 kB │ gzip:  14.31 kB
+build/client/assets/components-CbN6wzTY.js                                                                                       257.05 kB │ gzip:  82.85 kB
+build/client/assets/three-CVtrF9dj.js                                                                                            561.11 kB │ gzip: 143.11 kB
 
-1: export { Home as default, meta, links } from './home';
-                                   ^
-
-    at getRollupError (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
-    at error (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
-    at Module.error (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
-    at Module.getVariableForExportName (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17199:29)
-    at getVariableForExportNameRecursive (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:16858:19)
-    at Module.getVariableForExportName (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17197:41)
-    at Module.getExportedVariablesByName (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17116:45)
-    at Module.includeAllExports (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17266:37)
-    at Graph.includeStatements (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:22837:36)
-    at Graph.build (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:22767:14) {
-  binding: 'links',
-  code: 'MISSING_EXPORT',
-  exporter: '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.jsx',
-  id: '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
-  url: 'https://rollupjs.org/troubleshooting/#error-name-is-not-exported-by-module',
-  pos: 32,
-  loc: {
-    column: 32,
-    file: '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
-    line: 1
-  },
-  frame: "1: export { Home as default, meta, links } from './home';\n" +
-    '                                   ^',
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.00s
+vite v5.4.21 building SSR bundle for production...
+transforming...
+✓ 192 modules transformed.
+x Build failed in 578ms
+[vite]: Rollup failed to resolve import "~/utils/theme.server" from "/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/api.set-theme.js".
+This is most likely unintended because it can break your application at runtime.
+If you do want to externalize this module explicitly add it to
+`build.rollupOptions.external`
+    at viteWarn (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65855:17)
+    at onwarn (/Users/mac/Desktop/untitled folder 2/portfolio/node_modules/@remix-run/dev/dist/vite/plugin.js:630:13)
+    at onRollupWarning (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65885:5)
+    at onwarn (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65550:7)
+    at file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:20995:13
+    at Object.logger [as onLog] (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:22968:9)
+    at ModuleLoader.handleInvalidResolvedId (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:21712:26)
+    at file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:21670:26 {
   watchFiles: [
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/entry.client.tsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/route.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/route.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/route.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/root.jsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/route.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/$.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/route.js',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/api.set-theme.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/$.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/entry.server.tsx',
     '/Users/mac/Desktop/untitled folder 2/portfolio/package.json',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/slice.jsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/contact.jsx',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/smart-sparrow.jsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.jsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/uses.jsx',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/thumbnails.jsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/slice.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/slice.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/contact.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/uses.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/reset.module.css',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/global.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/root.module.css',
+    'app/assets/fonts/gotham-book.woff2',
+    'app/assets/fonts/gotham-medium.woff2',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/config.json',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/thumbnails.module.css',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.module.css',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/smart-sparrow.module.css',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/project-summary.jsx',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/profile.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/project-summary.jsx',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/intro.jsx',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/uses.module.css',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/contact.module.css',
-    'app/assets/slice-app-large.jpg',
-    'app/assets/slice-app.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/slice.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/smart-sparrow.module.css',
     'app/assets/slice-background.jpg',
     'app/assets/slice-background-large.jpg',
-    'app/assets/slice-sidebar-annotations-placeholder.png',
-    'app/assets/slice-irl.jpg',
-    'app/assets/slice-slides-large.jpg',
-    'app/assets/gamestack-login-large.jpg',
     'app/assets/gamestack-list-large.jpg',
     'app/assets/gamestack-list.jpg',
-    'app/assets/spr-lesson-builder-dark-placeholder.jpg',
+    'app/assets/gamestack-login-large.jpg',
     'app/assets/gamestack-login.jpg',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/config.json',
+    'app/assets/slice-app.jpg',
+    'app/assets/slice-app-large.jpg',
+    'app/assets/spr-lesson-builder-dark-placeholder.jpg',
+    'app/assets/slice-sidebar-annotations-placeholder.png',
+    'app/assets/slice-irl.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/contact.module.css',
+    'app/assets/slice-slides-large.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/uses.module.css',
     'app/assets/thumbs/_f8eSwcaT9U-HD.jpg',
     'app/assets/thumbs/IMG-20250130-WA0007.jpg',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/thumbnails.module.css',
     'app/assets/slice-sidebar-annotations-large.png',
     'app/assets/slice-sidebar-annotations.png',
     'app/assets/slice-sidebar-layers-large.png',
-    'app/assets/slice-sidebar-layers.png',
     'app/assets/thumbs/15_Most_Luxurious_Cars_In_The_WorldONE.png',
+    'app/assets/slice-sidebar-layers.png',
     'app/assets/thumbs/Canada_s_Shocking_Move_Could_Cripple_TWO.png',
-    'app/assets/thumbs/Elon_Musk_SHOCKED_as_U.K._Bans_Cybertruck_on_Roads_TWO.png',
     'app/assets/thumbs/Canada_s_Shocking_Move_Could_Cripple__THREE.png',
+    'app/assets/thumbs/Elon_Musk_SHOCKED_as_U.K._Bans_Cybertruck_on_Roads_TWO.png',
     'app/assets/thumbs/Blake_Lively_TWO.png',
     'app/assets/thumbs/Canada_s_Shocking_Move_Could_Cripple__ONE.png',
+    'app/assets/thumbs/John_Deere_SHUTS_DOWN__174_Billion__TWO.png',
     'app/assets/thumbs/John_Deere_Just_THREATENED_Donald_Trump_TWO.png',
     'app/assets/thumbs/MISTRAL_DESIGN__-_2024-04-24T191647.006.png',
-    'app/assets/thumbs/John_Deere_SHUTS_DOWN__174_Billion__TWO.png',
+    'app/assets/thumbs/John_Deere_SHUTS_DOWN__174_Billion_ONE.png',
+    'app/assets/thumbs/MISTRAL_DESIGN__22_.png',
     'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_1.png',
     'app/assets/thumbs/MISTRAL_DESIGN__21_.png',
-    'app/assets/thumbs/MISTRAL_DESIGN__22_.png',
-    'app/assets/thumbs/John_Deere_SHUTS_DOWN__174_Billion_ONE.png',
-    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_2__2_.png',
-    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_2__1_.png',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/utils/style.js',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/utils/meta.js',
+    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_2__1_.png',
+    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_2__2_.png',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/utils/style.js',
     'app/assets/thumbs/Farmers_Are_Fed_Up_With_John_ONE.png',
     'app/assets/thumbs/MISTRAL_DESIGN__29_.png',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/theme-provider/theme.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/layouts/error/index.js',
     'app/assets/slice-background-bar.jpg',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/reset.module.css',
+    'app/assets/slice-background-bar-large.jpg',
     'app/routes/home/katakana.svg',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/profile.module.css',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/project-summary.module.css',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere.jsx',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/intro.module.css',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/root.module.css',
-    'app/assets/slice-background-bar-large.jpg',
-    'app/assets/fonts/gotham-book.woff2',
-    'app/assets/fonts/gotham-medium.woff2',
     'app/assets/thumbs/Airbus_Drops_A_BOMBSHELL_And_This_Could_Be_The_END_Of_Boeing__ONE.png',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/layouts/navbar/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/theme-provider/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/progress/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/visually-hidden/index.js',
     'app/assets/thumbs/HAPPENING_NOW__Canada_Shuts_Down__103.3_Billion_Oil_Export_to_U.S._Industry_With_Bold_Move_3.png',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere-fragment.glsl',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere-vertex.glsl',
-    'app/assets/profile-large.jpg',
-    'app/assets/profile.jpg',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/footer/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/model/device-models.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/hooks/useHydrated.js',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/layouts/project/index.js',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/image/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/list/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/link/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/divider/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/decoder-text/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/table/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/heading/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/icon/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/text/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/input/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/hooks/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/section/index.js',
+    'app/assets/profile.jpg',
+    'app/assets/profile-large.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere-fragment.glsl',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere-vertex.glsl',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/layouts/error/error.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/model/device-models.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/hooks/useHydrated.js',
     '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/button/index.js',
-    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/transition/index.js',
-    ... 738 more items
-  ],
-  Symbol(augmented): true
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/decoder-text/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/input/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/divider/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/icon/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/section/index.js',
+    ... 84 more items
+  ]
 }
