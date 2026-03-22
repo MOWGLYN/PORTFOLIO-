@@ -19,25 +19,7 @@ import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
 
-// Prefetch draco decoader wasm
-export const links = () => {
-  return [
-    {
-      rel: 'prefetch',
-      href: '/draco/draco_wasm_wrapper.js',
-      as: 'script',
-      type: 'text/javascript',
-      importance: 'low',
-    },
-    {
-      rel: 'prefetch',
-      href: '/draco/draco_decoder.wasm',
-      as: 'fetch',
-      type: 'application/wasm',
-      importance: 'low',
-    },
-  ];
-};
+
 
 export const meta = () => {
   return baseMeta({
@@ -148,8 +130,8 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="How I work"
+        description="Designing a high-performing YouTube thumbnail requires more than creativity. My workflow focuses on understanding the video, creating a strong visual hook, and crafting thumbnails that stop viewers from scrolling and make them click."
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{

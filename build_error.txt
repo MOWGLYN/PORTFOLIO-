@@ -1,0 +1,163 @@
+
+> portfolio@1.0.0 build
+> remix vite:build
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[warn] Fetcher persistence behavior is changing in React Router v7
+┃ You can use the `v3_fetcherPersist` future flag to opt-in early.
+┃ -> https://remix.run/docs/en/2.13.1/start/future-flags#v3_fetcherPersist
+┗
+[warn] Route discovery/manifest behavior is changing in React Router v7
+┃ You can use the `v3_lazyRouteDiscovery` future flag to opt-in early.
+┃ -> https://remix.run/docs/en/2.13.1/start/future-flags#v3_lazyRouteDiscovery
+┗
+[warn] Relative routing behavior for splat routes is changing in React Router v7
+┃ You can use the `v3_relativeSplatPath` future flag to opt-in early.
+┃ -> https://remix.run/docs/en/2.13.1/start/future-flags#v3_relativeSplatPath
+┗
+[warn] Data fetching is changing to a single fetch in React Router v7
+┃ You can use the `v3_singleFetch` future flag to opt-in early.
+┃ -> https://remix.run/docs/en/2.13.1/start/future-flags#v3_singleFetch
+┗
+[warn] The format of errors thrown on aborted requests is changing in React Router v7
+┃ You can use the `v3_throwAbortReason` future flag to opt-in early.
+┃ -> https://remix.run/docs/en/2.13.1/start/future-flags#v3_throwAbortReason
+┗
+vite v5.4.21 building for production...
+transforming...
+✓ 872 modules transformed.
+x Build failed in 3.74s
+app/routes/home/route.js (1:32): "links" is not exported by "app/routes/home/home.jsx", imported by "app/routes/home/route.js".
+file: /Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js:1:32
+
+1: export { Home as default, meta, links } from './home';
+                                   ^
+
+    at getRollupError (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
+    at Module.getVariableForExportName (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17199:29)
+    at getVariableForExportNameRecursive (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:16858:19)
+    at Module.getVariableForExportName (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17197:41)
+    at Module.getExportedVariablesByName (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17116:45)
+    at Module.includeAllExports (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:17266:37)
+    at Graph.includeStatements (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:22837:36)
+    at Graph.build (file:///Users/mac/Desktop/untitled%20folder%202/portfolio/node_modules/vite/node_modules/rollup/dist/es/shared/node-entry.js:22767:14) {
+  binding: 'links',
+  code: 'MISSING_EXPORT',
+  exporter: '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.jsx',
+  id: '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
+  url: 'https://rollupjs.org/troubleshooting/#error-name-is-not-exported-by-module',
+  pos: 32,
+  loc: {
+    column: 32,
+    file: '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
+    line: 1
+  },
+  frame: "1: export { Home as default, meta, links } from './home';\n" +
+    '                                   ^',
+  watchFiles: [
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/entry.client.tsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/root.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/$.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/route.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/package.json',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/slice.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/contact.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/smart-sparrow.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/uses.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/thumbnails.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.slice/slice.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/global.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/home.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.smart-sparrow/smart-sparrow.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/project-summary.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/profile.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/intro.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/uses/uses.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/contact/contact.module.css',
+    'app/assets/slice-app-large.jpg',
+    'app/assets/slice-app.jpg',
+    'app/assets/slice-background.jpg',
+    'app/assets/slice-background-large.jpg',
+    'app/assets/slice-sidebar-annotations-placeholder.png',
+    'app/assets/slice-irl.jpg',
+    'app/assets/slice-slides-large.jpg',
+    'app/assets/gamestack-login-large.jpg',
+    'app/assets/gamestack-list-large.jpg',
+    'app/assets/gamestack-list.jpg',
+    'app/assets/spr-lesson-builder-dark-placeholder.jpg',
+    'app/assets/gamestack-login.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/config.json',
+    'app/assets/thumbs/_f8eSwcaT9U-HD.jpg',
+    'app/assets/thumbs/IMG-20250130-WA0007.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/projects.thumbnails/thumbnails.module.css',
+    'app/assets/slice-sidebar-annotations-large.png',
+    'app/assets/slice-sidebar-annotations.png',
+    'app/assets/slice-sidebar-layers-large.png',
+    'app/assets/slice-sidebar-layers.png',
+    'app/assets/thumbs/15_Most_Luxurious_Cars_In_The_WorldONE.png',
+    'app/assets/thumbs/Canada_s_Shocking_Move_Could_Cripple_TWO.png',
+    'app/assets/thumbs/Elon_Musk_SHOCKED_as_U.K._Bans_Cybertruck_on_Roads_TWO.png',
+    'app/assets/thumbs/Canada_s_Shocking_Move_Could_Cripple__THREE.png',
+    'app/assets/thumbs/Blake_Lively_TWO.png',
+    'app/assets/thumbs/Canada_s_Shocking_Move_Could_Cripple__ONE.png',
+    'app/assets/thumbs/John_Deere_Just_THREATENED_Donald_Trump_TWO.png',
+    'app/assets/thumbs/MISTRAL_DESIGN__-_2024-04-24T191647.006.png',
+    'app/assets/thumbs/John_Deere_SHUTS_DOWN__174_Billion__TWO.png',
+    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_1.png',
+    'app/assets/thumbs/MISTRAL_DESIGN__21_.png',
+    'app/assets/thumbs/MISTRAL_DESIGN__22_.png',
+    'app/assets/thumbs/John_Deere_SHUTS_DOWN__174_Billion_ONE.png',
+    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_2__2_.png',
+    'app/assets/thumbs/Trump_in_PANIC_as_protests_ERUPT_across_America_2__1_.png',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/utils/style.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/utils/meta.js',
+    'app/assets/thumbs/Farmers_Are_Fed_Up_With_John_ONE.png',
+    'app/assets/thumbs/MISTRAL_DESIGN__29_.png',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/theme-provider/theme.js',
+    'app/assets/slice-background-bar.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/reset.module.css',
+    'app/routes/home/katakana.svg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/profile.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/project-summary.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere.jsx',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/intro.module.css',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/root.module.css',
+    'app/assets/slice-background-bar-large.jpg',
+    'app/assets/fonts/gotham-book.woff2',
+    'app/assets/fonts/gotham-medium.woff2',
+    'app/assets/thumbs/Airbus_Drops_A_BOMBSHELL_And_This_Could_Be_The_END_Of_Boeing__ONE.png',
+    'app/assets/thumbs/HAPPENING_NOW__Canada_Shuts_Down__103.3_Billion_Oil_Export_to_U.S._Industry_With_Bold_Move_3.png',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere-fragment.glsl',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/routes/home/displacement-sphere-vertex.glsl',
+    'app/assets/profile-large.jpg',
+    'app/assets/profile.jpg',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/footer/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/model/device-models.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/hooks/useHydrated.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/layouts/project/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/image/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/list/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/link/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/divider/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/decoder-text/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/table/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/heading/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/icon/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/text/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/input/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/hooks/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/section/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/button/index.js',
+    '/Users/mac/Desktop/untitled folder 2/portfolio/app/components/transition/index.js',
+    ... 738 more items
+  ],
+  Symbol(augmented): true
+}
