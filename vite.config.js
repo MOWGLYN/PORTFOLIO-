@@ -11,7 +11,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
 
 export default defineConfig({
-  // 1. Sets the public path for assets (CSS, JS, .glb files)
+  // 1. Correct the asset path to match your repo name
   base: '/PORTFOLIO-/',
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
   build: {
@@ -27,9 +27,9 @@ export default defineConfig({
       providerImportSource: '@mdx-js/react',
     }),
     remix({
-      // 2. Fixes Dark/Light mode hydration errors by making it a static SPA
+      // 2. Disable SSR for GitHub Pages compatibility
       ssr: false,
-      // 3. Tells Remix routing to start after the subfolder name
+      // 3. Correct the routing basename
       basename: '/PORTFOLIO-/',
       routes(defineRoutes) {
         return defineRoutes(route => {
