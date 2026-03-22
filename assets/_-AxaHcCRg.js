@@ -1,0 +1,1 @@
+import{z as t,n as o}from"./components-D5giP5-8.js";import{E as e}from"./error-B7OSHtMA.js";import"./heading-CPgvCoWE.js";import"./decoder-text-Bum4cYIo.js";const i=async()=>{throw new Response(null,{status:404,statusText:"Not found"})},m=()=>[{title:"404 | Redacted"}];function c(){const r=t();return o.jsx(e,{error:r})}export{c as ErrorBoundary,i as clientLoader,m as meta};
