@@ -6,7 +6,7 @@ Cache.enabled = true;
 
 const dracoLoader = new DRACOLoader();
 const gltfLoader = new GLTFLoader();
-dracoLoader.setDecoderPath('/draco/');
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 gltfLoader.setDRACOLoader(dracoLoader);
 
 /**
