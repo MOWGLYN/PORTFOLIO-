@@ -9,9 +9,10 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
-import { vercelPreset } from '@vercel/remix/vite';
 
 export default defineConfig({
+  // Crucial for GitHub Pages subfolders
+  base: '/zakariafatih/',
   assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
   build: {
     assetsInlineLimit: 1024,
@@ -26,7 +27,10 @@ export default defineConfig({
       providerImportSource: '@mdx-js/react',
     }),
     remix({
-      presets: [vercelPreset()],
+      // 1. Disable SSR to fix Theme and 3D issues
+      ssr: false,
+      // 2. Set the subfolder path
+      basename: '/zakariafatih/',
       routes(defineRoutes) {
         return defineRoutes(route => {
           route('/', 'routes/home/route.js', { index: true });
