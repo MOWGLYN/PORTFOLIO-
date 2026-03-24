@@ -14,9 +14,7 @@ import { useHydrated } from '~/hooks/useHydrated';
 import katakana from './katakana.svg';
 import styles from './project-summary.module.css';
 
-const Model = lazy(() =>
-  import('~/components/model').then(module => ({ default: module.Model }))
-);
+import { Model } from '~/components/model';
 
 export function ProjectSummary({
   id,

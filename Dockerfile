@@ -1,40 +1,33 @@
+# Stage 1: Build
 FROM node:20-alpine AS build
-
 WORKDIR /app
 
+# Copy package files and install ALL dependencies
 COPY package.json package-lock.json ./
-RUN npm ci
+COPY scripts scripts/
+RUN npm ci --legacy-peer-deps
 
+# Copy everything and build
 COPY . .
-
 RUN npm run build
 
+# Stage 2: Production
 FROM node:20-alpine AS production
-
 WORKDIR /app
 
+# Only install production dependencies
 COPY package.json package-lock.json ./
-RUN npm ci --only=production
+COPY scripts scripts/
+RUN npm ci --omit=dev --legacy-peer-deps
 
-COPY --from=build /app/build ./build
-COPY --from=build /app/public ./public
-COPY --from=build /app/app/entry.client.tsx ./app/entry.client.tsx
-COPY --from=build /app/app/entry.server.tsx ./app/entry.server.tsx
-COPY --from=build /app/app/config.json ./app/config.json
-COPY --from=build /app/app/global.module.css ./app/global.module.css
-COPY --from=build /app/app/reset.module.css ./app/reset.module.css
-COPY --from=build /app/app/root.jsx ./app/root.jsx
-COPY --from=build /app/app/root.module.css ./app/root.module.css
-COPY --from=build /app/app/assets ./app/assets
-COPY --from=build /app/app/components ./app/components
-COPY --from=build /app/app/hooks ./app/hooks
-COPY --from=build /app/app/layouts ./app/layouts
-COPY --from=build /app/app/routes ./app/routes
-COPY --from=build /app/app/utils ./app/utils
+# ONLY copy the generated build and the static assets
+# This is where your 3D models live!
+COPY --from=build /app/build/client ./public
+COPY --from=build /app/build/server ./build/server
 
-
+# Set environment and port
 ENV NODE_ENV=production
-
 EXPOSE 3000
 
-CMD ["remix-serve", "./build/server/index.js"]
+# Start the server
+CMD ["npx", "remix-serve", "./build/server/index.js"]
